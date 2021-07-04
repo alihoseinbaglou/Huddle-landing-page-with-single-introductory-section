@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: #674baf;
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+}
+html body .container img:nth-child(2) {
+  display: none;
+}
+html body .container .image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+html body .container .logo a img {
+  display: block;
+  width: 240px;
+  padding: 2.5rem 0 0 4rem;
+}
+html body .container .main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 50px;
+  width: 90%;
+  margin-top: 4rem;
+  margin-inline: auto;
+}
+html body .container .main .illustration img {
+  display: block;
+  max-width: 100%;
+}
+html body .container .main .registration {
+  transition: all 250ms;
+}
+html body .container .main .registration p:nth-child(1) {
+  padding-top: 4rem;
+  color: #fff;
+  font-weight: 600;
+  font-size: 35px;
+}
+html body .container .main .registration p:nth-child(2) {
+  color: #dfdfdf;
+  font-weight: 400;
+  padding-top: 1.5rem;
+  line-height: 1.5;
+  width: 83%;
+}
+html body .container .main .registration button {
+  margin-top: 2rem;
+  display: inline-block;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+  padding: 1rem 2.5rem;
+  border-radius: 28px;
+  border: none;
+  max-width: 180px;
+  width: 100%;
+  font-size: 0.875em;
+  color: #674baf;
+  font-weight: 400;
+  transition: all 250ms;
+}
+html body .container .main .registration button:hover {
+  cursor: pointer;
+  color: #fff;
+  background-color: #e882e8;
+}
+html body .container .main .registration .social-media {
+  margin-top: 8rem;
+  margin-left: 24rem;
+  display: flex;
+}
+html body .container .main .registration .social-media a {
+  display: inline-block;
+  width: 35px;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  text-align: center;
+  text-decoration: none;
+  padding: 8px;
+  margin: 3px;
+  font-size: 16px;
+}
+html body .container .main .registration .social-media a:hover {
+  border: 1px solid #e882e8;
+  color: #e882e8;
+}
+html body .container .attribution {
+  font-size: 12px;
+  max-width: 700px;
+  margin: 4rem auto;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+html body .container .attribution div:nth-child(1) {
+  padding-right: 1rem;
+}
+html body .container .attribution a {
+  color: #fff;
+}
+
+@media only screen and (max-width: 1250px) {
+  html body .container .main {
+    grid-template-columns: 60% 40%;
+  }
+  html body .container .main .registration .social-media {
+    margin-left: 15em;
+    margin-top: 5rem;
+  }
+  html body .container .main .illustration img {
+    margin-top: 2rem;
+  }
+}
+@media only screen and (max-width: 1040px) {
+  html body .container .main {
+    grid-template-columns: 55% 45%;
+  }
+  html body .container .main .registration button {
+    width: 150px;
+  }
+  html body .container .main .registration .social-media {
+    margin-left: 13em;
+  }
+  html body .container .main .illustration img {
+    margin-top: 3.3rem;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  html body .container .main {
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    width: 75%;
+    margin-top: 1rem;
+    margin-inline: auto;
+  }
+  html body .container .main .registration {
+    text-align: center;
+  }
+  html body .container .main .registration p:nth-child(2) {
+    width: 100%;
+  }
+  html body .container .main .registration .social-media {
+    margin-inline: initial;
+    margin-top: 3rem;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 710px) {
+  html body .container .attribution {
+    justify-content: space-around;
+  }
+}
+@media only screen and (max-width: 400px) {
+  html body .container img:nth-child(1) {
+    display: none;
+  }
+  html body .container img:nth-child(2) {
+    display: block;
+  }
+  html body .container .images {
+    height: auto;
+  }
+  html body .container .logo a img {
+    width: 180px;
+    padding: 2rem 0 0 2rem;
+  }
+  html body .container .main {
+    grid-gap: initial;
+  }
+  html body .container .main .registration p:nth-child(1) {
+    font-size: 23px;
+    padding-top: 1.5rem;
+  }
+  html body .container .main .registration p:nth-child(2) {
+    padding-top: 1rem;
+    line-height: 1.5;
+    width: 100%;
+    font-size: 14px;
+  }
+  html body .container .main .registration button {
+    width: 200px;
+    max-width: 200px;
+    padding: 10px 2.5rem;
+  }
+  html body .container .main .illustration img {
+    margin-top: 1.5rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

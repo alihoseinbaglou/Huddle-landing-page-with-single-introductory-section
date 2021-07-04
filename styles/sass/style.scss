@@ -1,0 +1,298 @@
+@import "config";
+
+//browsers reset
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: $violet;
+    overflow-x: hidden;
+    font-family: $font;
+
+    body {
+        .container {
+            img:nth-child(2) {
+                display: none;
+            }
+
+            .image {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                display: block;
+                width: 100%; height: 100%;
+            }
+
+            .logo {
+                a {
+                    img {
+                        display: block;
+                        width: 240px;
+                        padding: 2.5rem 0 0 4rem;
+                    }
+                }
+            }
+
+            .main {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 50px;
+                width: 90%;
+                margin-top: 4rem;
+                margin-inline: auto;
+
+                .illustration {
+                    img {
+                        display: block;
+                        max-width: 100%;
+                    }
+                }
+
+                .registration {
+                    transition: all 250ms;
+
+                    p:nth-child(1) {
+                        padding-top: 4rem;
+                        color: $white;
+                        font-weight: $fontWeight_2;
+                        font-size: 35px;
+                    }
+
+                    p:nth-child(2) {
+                        color: rgb(223, 223, 223);
+                        font-weight: $fontWeight_1;
+                        padding-top: 1.5rem;
+                        line-height: 1.5;
+                        width: 83%;
+                    }
+
+                    button {
+                        margin-top: 2rem;
+                        display: inline-block;
+                        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+                        padding: 1rem 2.5rem;
+                        border-radius: 28px;
+                        border: none;
+                        max-width: 180px;
+                        width: 100%;
+                        font-size: 0.875em;
+                        color: $violet;
+                        font-weight: $fontWeight_1;
+                        transition: all 250ms;
+
+                        &:hover {
+                            cursor: pointer;
+                            color: $white;
+                            background-color: $softMagneta;
+                        }
+                    }
+
+                    .social-media {
+                       margin-top: 8rem;
+                       margin-left: 24rem;
+                       display: flex;
+
+                        a {
+                            display: inline-block;
+                            width: 35px;
+                            color: $white;
+                            border: 1px solid $white;
+                            border-radius: 50%;
+                            text-align: center;
+                            text-decoration: none;
+                            padding: 8px;
+                            margin: 3px;
+                            font-size: 16px;
+
+                            &:hover {
+                                border: 1px solid $softMagneta;
+                                color: $softMagneta;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .attribution {
+                font-size: 12px;
+                max-width: 700px;
+                margin: 4rem auto;
+                color: $white;
+                display: flex;
+                justify-content: space-between;
+        
+                div:nth-child(1) {
+                    padding-right: 1rem;
+                }
+        
+                a {
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+// Styles for the screen sizes between 1250px and 1040px
+@media only screen and (max-width: 1250px) {
+    html {
+        body {
+            .container {
+                .main {
+                    grid-template-columns: 60% 40%;
+
+                    .registration {
+                        .social-media {
+                            margin-left: 15em;
+                            margin-top: 5rem;
+                        }
+                    }
+
+                    .illustration {
+                        img {
+                            margin-top: 2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Styles for the screen sizes between 1040px and 1000px
+@media only screen and (max-width: 1040px) {
+    html {
+        body {
+            .container {
+                .main {
+                    grid-template-columns: 55% 45%;
+
+                    .registration {
+                        button {
+                            width: 150px;
+                        }
+
+                        .social-media {
+                            margin-left: 13em;
+                        }
+                    }
+
+                    .illustration {
+                        img {
+                            margin-top: 3.3rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Styles for the screen sizes between 1000px and 710px
+@media only screen and (max-width: 1000px) {
+    html {
+        body {
+            .container {
+                .main {
+                    grid-template-columns: 1fr;
+                    grid-gap: 10px;
+                    width: 75%;
+                    margin-top: 1rem;
+                    margin-inline: auto;
+
+                    .registration {
+                        text-align: center;
+    
+                        p:nth-child(2) {
+                            width: 100%;
+                        }
+
+                        .social-media {
+                            margin-inline: initial;
+                            margin-top: 3rem;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Styles for the screen sizes between 710px and 400px
+@media only screen and (max-width: 710px) {
+    html {
+        body {
+            .container {
+                .attribution {
+                    justify-content: space-around;
+                }
+            }
+        }
+    }
+}
+
+// styles for screen sizes smaller than 400px
+@media only screen and (max-width: 400px) {
+    html {
+        body {
+            .container {
+                img:nth-child(1) {
+                    display: none;
+                }
+
+                img:nth-child(2) {
+                    display: block;
+                }
+
+                .images {
+                    height: auto;
+                }
+
+                .logo {
+                    a {
+                        img {
+                            width: 180px;
+                            padding: 2rem 0 0 2rem;
+                        }
+                    }
+                }
+
+                .main {
+                    grid-gap: initial;
+
+                    .registration {
+                        p:nth-child(1) {
+                            font-size: 23px;
+                            padding-top: 1.5rem;
+                        }
+    
+                        p:nth-child(2) {
+                            padding-top: 1rem;
+                            line-height: 1.5;
+                            width: 100%;
+                            font-size: 14px;
+                        }
+
+                        button {
+                            width: 200px;
+                            max-width: 200px;
+                            padding: 10px 2.5rem;
+                        }
+                    }
+
+                    .illustration {
+                        img {
+                            margin-top: 1.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
